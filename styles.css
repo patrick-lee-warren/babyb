@@ -256,6 +256,24 @@ h1 {
   flex-wrap: wrap;
 }
 
+.music-player-wrap {
+  margin-top: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 14px;
+  backdrop-filter: blur(12px);
+}
+
+.music-player-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 190px;
+  border: 0;
+  border-radius: 12px;
+  background: #111;
+}
+
 .footer {
   padding: 30px 6vw 40px;
   border-top: 1px solid var(--border);
