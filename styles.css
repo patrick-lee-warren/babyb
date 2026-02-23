@@ -256,28 +256,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-.music-player-wrap {
-  margin-top: 28px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 14px;
-  backdrop-filter: blur(12px);
-}
-
-.music-player-wrap audio {
-  display: block;
-  width: 100%;
-  min-height: 54px;
-  border-radius: 12px;
-}
-
-.music-note {
-  margin: 12px 4px 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .floating-player {
   position: fixed;
   right: 16px;

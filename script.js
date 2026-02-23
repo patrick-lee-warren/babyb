@@ -3,6 +3,7 @@ const pumpButton = document.getElementById("pump-link");
 const themeAudio = document.getElementById("theme-audio");
 const floatingPlayButton = document.getElementById("floating-play");
 const floatingMuteButton = document.getElementById("floating-mute");
+const heroPlayButton = document.getElementById("hero-play-theme");
 
 const setLiveLinks = ({ contractAddress, pumpUrl }) => {
   if (contractAddress) {
@@ -36,21 +37,28 @@ const setupFloatingAudioControls = () => {
   const syncAudioUi = () => {
     floatingPlayButton.textContent = themeAudio.paused ? "Play" : "Pause";
     floatingMuteButton.textContent = themeAudio.muted ? "Unmute" : "Mute";
+    if (heroPlayButton) {
+      heroPlayButton.textContent = themeAudio.paused ? "Play Theme Song" : "Pause Theme Song";
+    }
   };
 
-  floatingPlayButton.addEventListener("click", async () => {
+  const togglePlayback = async () => {
     if (themeAudio.paused) {
       try {
         await themeAudio.play();
       } catch (err) {
-        floatingPlayButton.textContent = "Tap player";
+        floatingPlayButton.textContent = "Tap again";
+        if (heroPlayButton) heroPlayButton.textContent = "Tap again";
         setTimeout(syncAudioUi, 1200);
       }
     } else {
       themeAudio.pause();
     }
     syncAudioUi();
-  });
+  };
+
+  floatingPlayButton.addEventListener("click", togglePlayback);
+  if (heroPlayButton) heroPlayButton.addEventListener("click", togglePlayback);
 
   floatingMuteButton.addEventListener("click", () => {
     themeAudio.muted = !themeAudio.muted;

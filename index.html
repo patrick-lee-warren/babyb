@@ -26,7 +26,6 @@
         <div class="logo">BabyB</div>
         <div class="nav-links">
           <a href="#about">About</a>
-          <a href="#music">Music</a>
           <a href="#token">Token</a>
           <a href="#how">How To Buy</a>
           <a href="#roadmap">Roadmap</a>
@@ -43,7 +42,7 @@
         </p>
         <div class="cta-row" id="buy">
           <a class="btn primary" href="https://x.com/Ca11M3BABYB00" target="_blank" rel="noreferrer">X / Updates</a>
-          <a class="btn ghost" href="#music">Play Theme Song</a>
+          <button class="btn ghost" id="hero-play-theme" type="button">Play Theme Song</button>
           <button class="btn ghost" id="copy-ca" disabled>Contract Address: TBA</button>
           <button class="btn ghost" id="pump-link" disabled>Buy on pump.fun (TBA)</button>
         </div>
@@ -80,23 +79,6 @@
             <h3>What It Is Not</h3>
             <p>Not aggressive. Not militant. Not infrastructure. Just vibes, memes, and a soft spot.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="section music" id="music">
-        <div class="section-head">
-          <h2>Theme Song</h2>
-          <p>
-            Play "She Gon Call Me Baby Boo" right here. Tap play to start the track, then let it loop in the
-            background while people browse.
-          </p>
-        </div>
-        <div class="music-player-wrap">
-          <audio id="theme-audio" controls preload="none" loop>
-            <source src="babyboo_theme.mp3" type="audio/mpeg" />
-            Your browser does not support the audio player.
-          </audio>
-          <p class="music-note">Local track loaded from the site for smoother playback than external embeds.</p>
         </div>
       </section>
 
@@ -213,6 +195,9 @@
       <button class="btn ghost floating-player-btn" id="floating-play" type="button">Play</button>
       <button class="btn ghost floating-player-btn" id="floating-mute" type="button">Mute</button>
     </div>
+    <audio id="theme-audio" preload="none" loop hidden>
+      <source src="babyboo_theme.mp3" type="audio/mpeg" />
+    </audio>
 
     <script src="script.js"></script>
   </body>
