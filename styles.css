@@ -265,13 +265,17 @@ h1 {
   backdrop-filter: blur(12px);
 }
 
-.music-player-wrap iframe {
+.music-player-wrap audio {
   display: block;
   width: 100%;
-  min-height: 190px;
-  border: 0;
+  min-height: 54px;
   border-radius: 12px;
-  background: #111;
+}
+
+.music-note {
+  margin: 12px 4px 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .footer {

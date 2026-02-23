@@ -87,17 +87,16 @@
         <div class="section-head">
           <h2>Theme Song</h2>
           <p>
-            Play "She Gon Call Me Baby Boo" right here. Apple Music requires a tap to start playback, so
-            this works as an embedded player instead of auto background music.
+            Play "She Gon Call Me Baby Boo" right here. Tap play to start the track, then let it loop in the
+            background while people browse.
           </p>
         </div>
         <div class="music-player-wrap">
-          <iframe
-            title="She Gon Call Me Baby Boo on Apple Music"
-            src="https://embed.music.apple.com/us/album/she-gon-call-me-baby-boo-song-single/1843216856"
-            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-          ></iframe>
+          <audio controls preload="none" loop>
+            <source src="babyboo_theme.mp3" type="audio/mpeg" />
+            Your browser does not support the audio player.
+          </audio>
+          <p class="music-note">Local track loaded from the site for smoother playback than external embeds.</p>
         </div>
       </section>
 
