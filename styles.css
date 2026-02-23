@@ -240,6 +240,7 @@ h1 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 6px;
+  overflow-wrap: anywhere;
 }
 
 .step-num {

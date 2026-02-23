@@ -27,8 +27,8 @@ const setLiveLinks = ({ contractAddress, pumpUrl }) => {
   }
 };
 
-// Update these when ready.
+// Live token config.
 setLiveLinks({
-  contractAddress: "",
-  pumpUrl: "",
+  contractAddress: "8Rmtj9qDuUUVzNPFmSrHQXqYGoBZjw6aWedgP3VNpump",
+  pumpUrl: "https://pump.fun/coin/8Rmtj9qDuUUVzNPFmSrHQXqYGoBZjw6aWedgP3VNpump",
 });
